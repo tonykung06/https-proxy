@@ -7,5 +7,5 @@ httpProxy.createServer({
     cert: fs.readFileSync(process.env.SSL_CERT_PATH, 'utf8')
   },
   target: process.env.HTTPS_PROXY_TARGET,
-  secure: true // Depends on your needs, could be false.
+  secure: false // true/false, if you want to verify the SSL Certs
 }).listen(443)
