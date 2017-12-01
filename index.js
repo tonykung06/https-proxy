@@ -1,4 +1,6 @@
 const httpProxy = require('http-proxy')
+const fs = require('fs')
+
 httpProxy.createServer({
   ssl: {
     key: fs.readFileSync(process.env.SSL_KEY_PATH, 'utf8'),
